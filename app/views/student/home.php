@@ -6,7 +6,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Student Information</title>
+	<title>Homepage ni Cabrera</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<style>
@@ -302,7 +302,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 	<nav>
 		<span class="tag">IT&nbsp;PORTAL</span>
 		<a href="<?= site_url('student') ?>">Home</a>
-		<a href="<?= site_url('student/profile') ?>">Student Profile</a>
+		<a href="<?= site_url('student/profile') ?>">Cabrera Profile</a>
 	</nav>
 
 	<?php if (isset($_GET['denied'])): ?>
