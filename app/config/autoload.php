@@ -92,8 +92,8 @@ $autoload['helpers'] = array('url');
 |
 |	$autoload['models'] = array('model1_model', 'model2_model')
 */
+$autoload['models'] = array();
 
-$autoload['configs'] = array('middleware');
 /*
 | -------------------------------------------------------------------
 |  Auto-load Config files
@@ -106,5 +106,5 @@ $autoload['configs'] = array('middleware');
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['configs'] = array();
+$autoload['configs'] = array('middleware');
 ?>
