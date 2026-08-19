@@ -277,6 +277,24 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 			background: var(--wine);
 			transform: translateY(-2px);
 		}
+
+		.denied-banner {
+			position: relative;
+			z-index: 2;
+			width: 100%;
+			max-width: 460px;
+			background: #fff3f3;
+			border: 1px solid #e75480;
+			color: var(--maroon-deep);
+			font-family: var(--mono);
+			font-size: 12.5px;
+			font-weight: 700;
+			text-align: center;
+			padding: 10px 16px;
+			border-radius: 8px;
+			margin-bottom: 16px;
+			box-shadow: 0 6px 16px rgba(74,14,33,0.25);
+		}
 	</style>
 </head>
 <body>
@@ -286,6 +304,12 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 		<a href="<?= site_url('student') ?>">Home</a>
 		<a href="<?= site_url('student/profile') ?>">Student Profile</a>
 	</nav>
+
+	<?php if (isset($_GET['denied'])): ?>
+		<div class="denied-banner">
+			⛔ ACCESS DENIED — StudentMiddleware blocked /student/profile and redirected you here.
+		</div>
+	<?php endif; ?>
 
 	<div class="terminal">
 		<div class="term-bar">
