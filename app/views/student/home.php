@@ -320,7 +320,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 		</div>
 		<div class="term-body">
 			<div class="prompt">$ php artisan student:show<span class="cursor"></span></div>
-			<h1>Student Information</h1>
+			<h1>Cabrera's Information</h1>
 
 			<div class="fields">
 				<div class="field"><span class="label">Student_ID</span><span class="value"><?= $student_id ?></span></div>
@@ -331,7 +331,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 				<div class="field"><span class="label">Email</span><span class="value"><?= $email ?></span></div>
 			</div>
 
-			<a class="profile-link" href="<?= site_url('student/profile') ?>">View Full Profile &rarr;</a>
+			<a class="profile-link" href="<?= site_url('student/profile') ?>">View Cabrera's Full Profile &rarr;</a>
 		</div>
 	</div>
 
