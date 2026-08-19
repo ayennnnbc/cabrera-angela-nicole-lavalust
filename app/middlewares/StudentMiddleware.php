@@ -17,7 +17,9 @@ class StudentMiddleware
 		}
 
 		// Not allowed yet, send them back to the student page.
-		redirect(site_url('student'));
+		// The ?denied=1 flag lets the home view show a visible message,
+		// so the redirect is provable in a single screenshot.
+		redirect(site_url('student') . '?denied=1');
 	}
 }
 ?>
