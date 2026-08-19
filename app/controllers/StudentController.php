@@ -5,14 +5,13 @@ class StudentController extends Controller
 {
 	public function index()
 	{
-		// Mark that the student has visited the home page.
-		// This is used by StudentMiddleware to allow access to the profile page.
+		
 		if (session_status() === PHP_SESSION_NONE) {
 			session_start();
 		}
 		$_SESSION['student_access'] = true;
 
-		// Display student page
+	
 		$student = $this->student_data();
 
 		$this->call->view('student/home', $student);
@@ -20,15 +19,13 @@ class StudentController extends Controller
 
 	public function profile()
 	{
-		// Display student's profile
+	
 		$student = $this->student_data();
 
 		$this->call->view('student/profile', $student);
 	}
 
-	/**
-	 * Shared student data used by both the home and profile views.
-	 */
+
 	private function student_data()
 	{
 		return [
