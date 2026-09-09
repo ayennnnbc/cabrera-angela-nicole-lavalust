@@ -1,0 +1,174 @@
+/* Laboratory Exercise No. 5 - shared styling for auth & product pages */
+:root {
+	--ink: #1f2430;
+	--ink-soft: #5b6172;
+	--line: #e3e6ee;
+	--paper: #ffffff;
+	--paper-dim: #f5f6fa;
+	--brand: #3d5af1;
+	--brand-dark: #2c42c4;
+	--danger: #c0392b;
+	--danger-bg: #fdecea;
+	--success: #1e824c;
+	--success-bg: #e9f9ef;
+	--radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	background: var(--paper-dim);
+	color: var(--ink);
+}
+
+.topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 28px;
+	background: var(--paper);
+	border-bottom: 1px solid var(--line);
+}
+
+.topbar .brand { font-weight: 700; }
+.topbar .who { color: var(--ink-soft); font-size: 0.9rem; }
+.topbar a { color: var(--brand); text-decoration: none; font-weight: 600; }
+.topbar a:hover { text-decoration: underline; }
+
+.wrap {
+	display: flex;
+	justify-content: center;
+	padding: 48px 20px;
+}
+
+.auth-card {
+	width: 100%;
+	max-width: 380px;
+	background: var(--paper);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	padding: 32px;
+	box-shadow: 0 12px 30px -18px rgba(31, 36, 48, 0.25);
+}
+
+.page {
+	width: 100%;
+	max-width: 960px;
+}
+
+h1 { margin: 0 0 6px; font-size: 1.5rem; }
+h2 { margin: 28px 0 12px; font-size: 1.15rem; }
+p.lead { color: var(--ink-soft); margin: 0 0 20px; }
+
+form { display: flex; flex-direction: column; gap: 12px; }
+
+label { font-weight: 600; font-size: 0.88rem; margin-bottom: -6px; }
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea {
+	font: inherit;
+	padding: 10px 12px;
+	border: 1.5px solid var(--line);
+	border-radius: 8px;
+	background: var(--paper);
+	color: var(--ink);
+	width: 100%;
+}
+
+textarea { min-height: 80px; resize: vertical; }
+
+input:focus, textarea:focus {
+	outline: none;
+	border-color: var(--brand);
+}
+
+button, .btn {
+	display: inline-block;
+	font: inherit;
+	font-weight: 600;
+	padding: 10px 18px;
+	border-radius: 999px;
+	border: 1.5px solid var(--brand);
+	background: var(--brand);
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+}
+
+button:hover, .btn:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
+
+.btn-quiet {
+	background: var(--paper);
+	color: var(--ink);
+	border-color: var(--line);
+}
+.btn-quiet:hover { background: var(--paper-dim); }
+
+.btn-danger {
+	background: var(--paper);
+	color: var(--danger);
+	border-color: var(--danger);
+}
+.btn-danger:hover { background: var(--danger-bg); }
+
+.alert {
+	padding: 10px 14px;
+	border-radius: 8px;
+	font-size: 0.92rem;
+	margin-bottom: 16px;
+}
+.alert-error { background: var(--danger-bg); color: var(--danger); }
+.alert-success { background: var(--success-bg); color: var(--success); }
+
+.foot-note { margin-top: 18px; text-align: center; font-size: 0.9rem; color: var(--ink-soft); }
+.foot-note a { color: var(--brand); font-weight: 600; text-decoration: none; }
+.foot-note a:hover { text-decoration: underline; }
+
+.card {
+	background: var(--paper);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	padding: 24px;
+	margin-bottom: 24px;
+}
+
+.table-wrap {
+	background: var(--paper);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	overflow: hidden;
+}
+
+table { width: 100%; border-collapse: collapse; font-size: 0.94rem; }
+thead th {
+	background: var(--ink);
+	color: #fff;
+	text-align: left;
+	padding: 12px 14px;
+}
+tbody td { padding: 10px 14px; border-bottom: 1px solid var(--line); }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--paper-dim); }
+td.actions { white-space: nowrap; }
+
+.action-link {
+	display: inline-block;
+	padding: 5px 12px;
+	border-radius: 999px;
+	font-size: 0.82rem;
+	font-weight: 600;
+	margin-right: 6px;
+	text-decoration: none;
+}
+.action-edit { background: #eef1fe; color: var(--brand-dark); }
+.action-edit:hover { background: #dee3fc; }
+.action-delete { background: var(--danger-bg); color: var(--danger); }
+.action-delete:hover { background: #fbdad6; }
+
+.empty-row td { text-align: center; color: var(--ink-soft); padding: 24px; }
